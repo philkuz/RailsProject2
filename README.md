@@ -26,11 +26,14 @@ psql postgres
 ```
 Then in the postgres shell
 ```
-create database hyperpg_development;                                    create user some_user password 'some_password';                                       grant all on database hypeRPG_development to some_user;
+create database hyperpg_development;  
+create user some_user password 'some_password';
+grant all on database hypeRPG_development to some_user;
 ```
 change some_password and some_user to whatever you want them to be
 # Write Up
 Team Members: Phillip Kuznetsov, Alex Chan, David Lin, Jaron Armiger
+
 Demo Link: https://warm-harbor-2298.herokuapp.com/
 
 Idea: A click based RPG based around the idea of a hype attribute
