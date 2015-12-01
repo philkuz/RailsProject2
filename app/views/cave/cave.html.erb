@@ -1,3 +1,6 @@
 <h1>You are now in the Cave.</h1>
-<h7>Beware</h7>
-<p>Find me in app/views/cave/index.html.erb</p>
+<h4>Beware</h4>
+<h3>Places to Go</h3>
+<% @links.each do |name,link| %>
+    <%= button_to name, link, :class => "btn btn-default", :method => :get%>
+<% end %>

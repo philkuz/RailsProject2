@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   patch 'sleep/', to: 'main#sleep', as: 'sleep'
   get 'cave/', to: 'cave#cave', as: 'cave'
   get 'shop/', to:'shop#shop', as: 'shop'
+  get 'deeper/', to: 'cave#deeper', as: 'deeper'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

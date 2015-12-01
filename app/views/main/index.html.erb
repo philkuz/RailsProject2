@@ -2,6 +2,7 @@
 <div><%=image_tag @location.image%></div>
 <h3> Places to go</h3>
 <% @links.each do |name,link| %>
-    <button><%= link_to name, link %></button>
+    <%= button_to name, link, :class => "btn btn-default", :method => :get%>
 <% end %>
+<h3> Things to do</h3>
 <%= button_to "Sleep", sleep_path, :class => "btn btn-default", :method => :patch %>
