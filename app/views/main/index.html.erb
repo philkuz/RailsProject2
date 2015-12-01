@@ -1,6 +1,7 @@
-<h2>You are now at <%=@location.name%></h2>
+<h2>You are now at Home</h2>
 <div><%=image_tag @location.image%></div>
 <h3> Places to go</h3>
-<% @links.each do |link| %>
-    <button><%= link_to link %></button>
+<% @links.each do |name,link| %>
+    <button><%= link_to name, link %></button>
 <% end %>
+<%= button_to "Sleep", sleep_path, :class => "btn btn-default", :method => :patch %>

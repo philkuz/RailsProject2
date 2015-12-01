@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201003039) do
+ActiveRecord::Schema.define(version: 20151201182251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(version: 20151201003039) do
     t.integer  "damage"
     t.integer  "speed"
     t.boolean  "is_enemy"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "player_id"
+    t.integer  "base_health"
+    t.integer  "base_damage"
   end
 
   add_index "characters", ["player_id"], name: "index_characters_on_player_id", using: :btree
