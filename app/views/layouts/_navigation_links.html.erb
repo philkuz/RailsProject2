@@ -1,0 +1,8 @@
+<%# add navigation links to this file %>
+<% if player_signed_in? %>
+  <li><%= link_to 'Edit Your Character', edit_player_registration_path %></li>
+  <li><%= link_to 'Log Out', destroy_player_session_path, :method=>'delete' %></li>
+<% else %>
+  <li><%= link_to 'Log In', new_player_session_path %></li>
+  <li><%= link_to 'Join HypeRPG', new_player_registration_path %></li>
+<% end %>

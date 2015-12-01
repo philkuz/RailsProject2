@@ -1,2 +1,6 @@
-<h2>HypeRPG</h2>
-<p> The time is now: <%= Time.now %> </p>
+<h2>You are now at <%=@location.name%></h2>
+<div><%=image_tag @location.image%></div>
+<h3> Places to go</h3>
+<% @links.each do |link| %>
+    <button><%= link_to link %></button>
+<% end %>
