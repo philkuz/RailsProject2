@@ -6,15 +6,23 @@ class ApplicationController < ActionController::Base
   helper_method :get_health, :get_damage
   def get_character
       player = current_player
-      character =player.characters.find(1)
+      if player
+          character =player.characters.find(1)
+      else
+          character = nil
+      end
   end
   def get_health
       character = get_character
-      health = character.health.to_s + "/"+character.base_health.to_s
+      if character
+          health = character.health.to_s + "/"+character.base_health.to_s
+      end
   end
   def get_damage
       character = get_character
-      damage = character.damage.to_s + "/"+character.base_damage.to_s
+      if character
+          damage = character.damage.to_s + "/"+character.base_damage.to_s
+      end
   end
 
 

@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   get 'cave/', to: 'cave#cave', as: 'cave'
   get 'shop/', to:'shop#shop', as: 'shop'
   get 'deeper/', to: 'cave#deeper', as: 'deeper'
+  Rails.application.routes.draw do
+      devise_for :players, controllers: {
+        sessions: 'players/sessions'
+      }
+    end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
