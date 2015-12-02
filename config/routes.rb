@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'cave/', to: 'cave#cave', as: 'cave'
   get 'shop/', to:'shop#shop', as: 'shop'
   get 'deeper/', to: 'cave#deeper', as: 'deeper'
+  patch 'shop/:name/buy/:type', to: 'shop#buy', as: 'buy'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

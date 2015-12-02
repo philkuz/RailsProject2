@@ -1,2 +1,16 @@
-<h1>Shop#index</h1>
+<h1>Welcome to Me Sh0p</h1>
+<h4>Yargh What Do Ye Want to Buy??</h4>
+<h4>Items Available: </h4>
+
+<% @boots.each do |n,v| %>
+	<h5><%= n %> </h5>
+	<p>Cost: <%= v[0]%> </p>
+	<p>Damage: <%= v[1]%> </p>
+	<p>Armor: <%= v[2]%> </p>
+	<p>Speed: <%= v[3]%> </p>
+	<%= button_to "Purchase", buy_path(n,0), :class => "button medium", :method => :patch %>
+
+
+	<% end %>
+
 <p>Find me in app/views/shop/index.html.erb</p>

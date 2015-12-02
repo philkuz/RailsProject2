@@ -8861,3 +8861,2431 @@ ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=1 [WHERE "charac
   Rendered /Users/philkuz/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/philkuz/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/philkuz/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCashToCharacters (20151201221710)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "characters" ADD "cash" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151201221710"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToCharacter (20151201225356)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "characters" ADD "name" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151201225356"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'characters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20151202060220)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "name" character varying, "damage" integer, "armor" integer, "speed" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151202060220"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'characters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCharacterToItem (20151202060523)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "items" ADD "character_id" integer[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_items_on_character_id" ON "items"  ("character_id")
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "items" ADD CONSTRAINT "fk_rails_35423c7ef8"
+FOREIGN KEY ("character_id")
+  REFERENCES "characters" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151202060523"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'characters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'characters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "characters" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-12-02 06:16:14.923523"], ["updated_at", "2015-12-02 06:16:14.923523"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPlayer Load (0.9ms)[0m  SELECT "players".* FROM "players"
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPlayer Load (0.7ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "characters" SET "player_id" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["player_id", 1], ["updated_at", "2015-12-02 06:17:45.876500"], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."player_id" = $1  [["player_id", 1]]
+  [1m[36mCharacter Load (0.5ms)[0m  [1mSELECT "characters".* FROM "characters"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "locations" ("image", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["image", "home.jpg"], ["created_at", "2015-12-02 06:30:29.879276"], ["updated_at", "2015-12-02 06:30:29.879276"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-12-01 22:54:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mPlayer Load (0.5ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (163.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (43.9ms)
+Completed 200 OK in 627ms (Views: 579.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 22:54:10 -0800
+
+SyntaxError (/Users/jaronarmiger/Desktop/RailsProject2/app/controllers/shop_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/shop_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.4ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 22:54:44 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (13.6ms)
+Completed 200 OK in 159ms (Views: 144.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-01 22:54:44 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-01 22:54:45 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-01 22:55:18 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.4ms)
+Completed 200 OK in 131ms (Views: 128.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-01 22:55:18 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-01 22:56:52 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007f8f12a9f558>:0x007f8f12bb0910>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.input :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__3233854768197199843_70126239103820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.1ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:00:31 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.7ms)
+
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007f8f10d76738>:0x007f8f10d74de8>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.input :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__3233854768197199843_70126239103820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.0ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:01:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.7ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 4.9ms)
+
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007ff84b7d6720>:0x007ff84b7d47e0>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.input :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb___1231827953698005512_70352197302500'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 100], ["updated_at", "2015-12-02 07:02:57.942719"], ["id", 1]]
+  [1m[36m (49.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mLocation Load (0.6ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:04:06 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.5ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 4.2ms)
+
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007fd6bab5fae8>:0x007fd6bab5db58>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.input :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4333736255854658701_70280112942780'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:07:31 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (1.0ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (63.2ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 5.2ms)
+
+ActionView::Template::Error (undefined method `items_path' for #<#<Class:0x007fbb8bdb9630>:0x007fbb8bdac930>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.input :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221740445940'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.1ms)
+
+
+Started PUT "/console/repl_sessions/1cd37a21eb4abf441586386f9b0fbba0" for ::1 at 2015-12-01 23:10:30 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:12:19 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `items_path' for #<#<Class:0x007fbb8bdb9630>:0x007fbb8c5e2fc8>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (6.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.4ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:16:01 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"item"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.7ms)
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mCharacter Load (0.7ms)[0m  SELECT "characters".* FROM "characters"
+  [1m[36mCharacter Load (0.9ms)[0m  [1mSELECT  "characters".* FROM "characters"  ORDER BY "characters"."id" DESC LIMIT 1[0m
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:25:00 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:27:18 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.5ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.1ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:28:20 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.1ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:28:52 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__1315917689081737717_70221745293820'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.0ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:29:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (57.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742580240'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.6ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:30:49 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.7ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742580240'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.9ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:34:54 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"create_item", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742580240'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.7ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:39:25 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `items_path' for #<#<Class:0x007ff45fa893b8>:0x007ff45fa835a8>):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742580240'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:39:50 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"shop", :controller=>"shop"} missing required keys: [:id]):
+     7: 	</ol>
+     8: 
+     9: <h4>Yargh What Do Ye Want to Buy??</h4>
+    10: <%= simple_form_for @item do |i| %>
+    11:  <%=i.input :name %>
+    12:  <%=i.button :submit %>
+    13:  <%end%>
+  app/views/shop/shop.html.erb:10:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742580240'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.2ms)
+  [1m[35mItem Load (1.2ms)[0m  SELECT "items".* FROM "items"
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:53:09 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h4>Yargh What Do Ye Want to Buy??</h4>
+    3: <h4>Items Available: </h4>
+    4: 
+    5: <% @items.each do |i| %>
+    6: 	<p><%= i.name %> </p>
+    7: 	<p>Cost: $<%=i.cost%></p>
+    8: 	<p>Damage: <%=i.damage%></p>
+  app/views/shop/shop.html.erb:5:in `_app_views_shop_shop_html_erb__4530471403507471569_70343777112560'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.3ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:56:10 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h4>Yargh What Do Ye Want to Buy??</h4>
+    3: <h4>Items Available: </h4>
+    4: 
+    5: <% @items.each do |i| %>
+    6: 	<p><%= i.name %> </p>
+    7: 	<p>Cost: $<%=i.cost%></p>
+    8: 	<p>Damage: <%=i.damage%></p>
+  app/views/shop/shop.html.erb:5:in `_app_views_shop_shop_html_erb__4530471403507471569_70343777112560'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.4ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:57:41 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h4>Yargh What Do Ye Want to Buy??</h4>
+    3: <h4>Items Available: </h4>
+    4: 
+    5: <% @items.each do |i| %>
+    6: 	<p><%= i.name %> </p>
+    7: 	<p>Cost: $<%=i.cost%></p>
+    8: 	<p>Damage: <%=i.damage%></p>
+  app/views/shop/shop.html.erb:5:in `_app_views_shop_shop_html_erb__4530471403507471569_70343792099140'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.1ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-01 23:59:45 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h4>Yargh What Do Ye Want to Buy??</h4>
+    3: <h4>Items Available: </h4>
+    4: 
+    5: <% @items.each do |i| %>
+    6: 	<p><%= i.name %> </p>
+    7: 	<p>Cost: $<%=i.cost%></p>
+    8: 	<p>Damage: <%=i.damage%></p>
+  app/views/shop/shop.html.erb:5:in `_app_views_shop_shop_html_erb__4530471403507471569_70343792099140'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.5ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-02 00:01:17 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items"
+  Rendered shop/shop.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (46.1ms)
+Completed 200 OK in 555ms (Views: 539.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 00:01:18 -0800
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Boots"], ["created_at", "2015-12-02 08:03:02.771419"], ["updated_at", "2015-12-02 08:03:02.771419"]]
+  [1m[36m (49.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/shop" for ::1 at 2015-12-02 00:03:04 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered shop/shop.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (3.6ms)
+Completed 200 OK in 190ms (Views: 186.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 00:03:05 -0800
+
+
+Started PATCH "/buy/1" for ::1 at 2015-12-02 00:03:08 -0800
+Processing by ShopController#buy as HTML
+  Parameters: {"authenticity_token"=>"hcg5XDnh4BmYWUHN1MLow98zGDkMQQqO7uBtSJvmmgB/Bo5nD1fwMFyZbBRjW6iZrTyAu5zXnK9AN6TOd3SHyA==", "id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+ActionView::MissingTemplate (Missing template shop/buy, application/buy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jaronarmiger/Desktop/RailsProject2/app/views"
+  * "/Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (61.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.7ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:22:15 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.9ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (16.4ms)
+Completed 200 OK in 267ms (Views: 196.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:22:16 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:22:31 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.3ms)
+Completed 200 OK in 132ms (Views: 130.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:22:31 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:22:44 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.2ms)
+Completed 200 OK in 135ms (Views: 132.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:22:44 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:22:47 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.5ms)
+Completed 200 OK in 135ms (Views: 133.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:22:48 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:23:40 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/jaronarmiger/Desktop/RailsProject2/app/views/shop/shop.html.erb:7: syntax error, unexpected tLABEL
+...e;@output_buffer.append=( Cost:  v[0]);@output_buffer.safe_a...
+...                               ^):
+  app/views/shop/shop.html.erb:7: syntax error, unexpected tLABEL
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (103.8ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:24:58 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/jaronarmiger/Desktop/RailsProject2/app/views/shop/shop.html.erb:7: syntax error, unexpected tLABEL
+...e;@output_buffer.append=( Cost:  v);@output_buffer.safe_appe...
+...                               ^):
+  app/views/shop/shop.html.erb:7: syntax error, unexpected tLABEL
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.2ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:26:07 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (3.3ms)
+Completed 200 OK in 125ms (Views: 122.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:26:07 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:26:15 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.2ms)
+Completed 200 OK in 139ms (Views: 137.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:26:15 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:27:01 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (2.4ms)
+Completed 200 OK in 137ms (Views: 135.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:27:01 -0800
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:31:41 -0800
+Processing by ShopController#shop as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"buy", :controller=>"shop", :format=>"Rainbow Boots", :id=>nil} missing required keys: [:id]):
+     8: 	<p>Damage: <%= v[1]%> </p>
+     9: 	<p>Armor: <%= v[2]%> </p>
+    10: 	<p>Speed: <%= v[3]%> </p>
+    11: 	<%= button_to "Purchase", buy_path(@trainer, n), :class => "button medium", :method => :patch %>
+    12: 
+    13: 
+    14: 	<% end %>
+  app/views/shop/shop.html.erb:11:in `block in _app_views_shop_shop_html_erb__4530471403507471569_70343742649280'
+  app/views/shop/shop.html.erb:5:in `each'
+  app/views/shop/shop.html.erb:5:in `_app_views_shop_shop_html_erb__4530471403507471569_70343742649280'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.7ms)
+  [1m[35mCharacter Load (3.7ms)[0m  SELECT "characters".* FROM "characters"
+  [1m[36mCharacter Load (1.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "items" ("name", "character_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Boots"], ["character_id", 1], ["created_at", "2015-12-02 23:50:46.232595"], ["updated_at", "2015-12-02 23:50:46.232595"]]
+  [1m[35m (63.5ms)[0m  COMMIT
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:52:57 -0800
+
+SyntaxError (/Users/jaronarmiger/Desktop/RailsProject2/app/controllers/shop_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/shop_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.8ms)
+
+
+Started GET "/shop" for ::1 at 2015-12-02 15:53:11 -0800
+Processing by ShopController#shop as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shop/shop.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1[0m  [["player_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+  Rendered layouts/_playerattrs.html.erb (19.3ms)
+Completed 200 OK in 194ms (Views: 179.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/application.self-980408bfbe31dab6dfafc853fe7e6a47ccbbffa553d4d642805a40d16f79cd05.css?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-02 15:53:11 -0800
+
+
+Started PATCH "/shop/Rainbow%20Boots/buy/0" for ::1 at 2015-12-02 15:53:13 -0800
+Processing by ShopController#buy as HTML
+  Parameters: {"authenticity_token"=>"k6TdLjh8f49KzAYB12Ri+hxGIE9CJTx6jFJeend6XjZpamoVDspvpo4MK9hg/SKgbkm4zdKzqlsihZf8m+hD/g==", "name"=>"Rainbow Boots", "type"=>"0"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+NameError (undefined local variable or method `n' for #<ShopController:0x007ff45f4a3ac0>):
+  app/controllers/shop_controller.rb:19:in `buy'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.7ms)
+
+
+Started PATCH "/shop/Rainbow%20Boots/buy/0" for ::1 at 2015-12-02 15:53:58 -0800
+Processing by ShopController#buy as HTML
+  Parameters: {"authenticity_token"=>"k6TdLjh8f49KzAYB12Ri+hxGIE9CJTx6jFJeend6XjZpamoVDspvpo4MK9hg/SKgbkm4zdKzqlsihZf8m+hD/g==", "name"=>"Rainbow Boots", "type"=>"0"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.8ms)
+
+NoMethodError (undefined method `>=' for nil:NilClass):
+  app/controllers/shop_controller.rb:20:in `buy'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started PATCH "/shop/Rainbow%20Boots/buy/0" for ::1 at 2015-12-02 15:54:43 -0800
+Processing by ShopController#buy as HTML
+  Parameters: {"authenticity_token"=>"k6TdLjh8f49KzAYB12Ri+hxGIE9CJTx6jFJeend6XjZpamoVDspvpo4MK9hg/SKgbkm4zdKzqlsihZf8m+hD/g==", "name"=>"Rainbow Boots", "type"=>"0"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.7ms)
+
+NoMethodError (undefined method `>=' for nil:NilClass):
+  app/controllers/shop_controller.rb:20:in `buy'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.4ms)
+
+
+Started PATCH "/shop/Rainbow%20Boots/buy/0" for ::1 at 2015-12-02 15:56:47 -0800
+Processing by ShopController#buy as HTML
+  Parameters: {"authenticity_token"=>"k6TdLjh8f49KzAYB12Ri+hxGIE9CJTx6jFJeend6XjZpamoVDspvpo4MK9hg/SKgbkm4zdKzqlsihZf8m+hD/g==", "name"=>"Rainbow Boots", "type"=>"0"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 AND "characters"."id" = $2 LIMIT 1  [["player_id", 1], ["id", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.7ms)
+
+ActionView::MissingTemplate (Missing template shop/buy, application/buy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jaronarmiger/Desktop/RailsProject2/app/views"
+  * "/Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jaronarmiger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (64.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.3ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jaronarmiger/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.8ms)
