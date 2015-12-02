@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :players
+  devise_for :players, controllers: {
+    sessions: 'players/sessions'
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,11 +11,6 @@ Rails.application.routes.draw do
   get 'cave/', to: 'cave#cave', as: 'cave'
   get 'shop/', to:'shop#shop', as: 'shop'
   get 'deeper/', to: 'cave#deeper', as: 'deeper'
-  Rails.application.routes.draw do
-      devise_for :players, controllers: {
-        sessions: 'players/sessions'
-      }
-    end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
