@@ -3,6 +3,9 @@ class CaveController < ApplicationController
       @links = {"Leave Cave" => root_path, "Deeper" => deeper_path}
   end
   def deeper
-      render partial: 
+  end
+  def enemy
+  	@enemy = character.create health: 20, hype: 2
   end
 end
+
