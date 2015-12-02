@@ -1,0 +1,8 @@
+<h1>You are now deeper in the Cave.</h1>
+<h4>ENEMY JPG</h4>
+
+
+<h3>Places to Go</h3>
+<% @links.each do |name,link| %>
+    <%= button_to name, link, :class => "btn btn-default", :method => :get%>
+<% end %>
