@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
   def get_character
       player = current_player
       if player
-          character =player.characters.find(1)
+
+          character = Character.find_by(player_id: player.id)
       else
+
           character = nil
       end
   end
