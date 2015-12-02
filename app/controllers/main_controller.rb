@@ -1,7 +1,6 @@
 class MainController < ApplicationController
     before_action :authenticate_player!
     def index
-        @location= Location.find(1)
         @links = {"Cave" => cave_path, "Shop" => shop_path}
     end
     def sleep

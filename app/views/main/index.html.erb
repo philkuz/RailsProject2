@@ -1,5 +1,5 @@
 <h2>You are now at Home</h2>
-<div><%=image_tag @location.image%></div>
+<div><%=image_tag "home.jpg"%></div>
 <h3> Places to go</h3>
 <% @links.each do |name,link| %>
     <%= button_to name, link, :class => "btn btn-default", :method => :get%>
