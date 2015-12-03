@@ -1,6 +1,9 @@
 <h1>You are now deeper in the Cave.</h1>
-<h4>ENEMY JPG</h4>
-
+<div><%=image_tag "cavemonster1.jpg",height: "400", width: "400"%></div>
+<h3>Creature Stats</h3>
+<p>Health: <%=@enemy.health%></p>
+<p>Damage: <%=@enemy.damage%></p>
+<%= button_to "Attack", attack_path, :class => "btn btn-default", :method => :patch%>
 
 <h3>Places to Go</h3>
 <% @links.each do |name,link| %>
