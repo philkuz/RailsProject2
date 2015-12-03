@@ -36,7 +36,7 @@ Team Members: Phillip Kuznetsov, Alex Chan, David Lin, Jaron Armiger
 
 Demo Link: https://warm-harbor-2298.herokuapp.com/
 
-Idea: A click based RPG based around the idea of a hype attribute
+Idea: A click based RPG where you can fight enemies and get cool items.
 
 
 ### Models and Description:
@@ -61,9 +61,10 @@ has name,
 
 Players can sign up and play as a Character
 
-Character can level up by getting hype,
-get items by buying from the store, 
-fight monsters in the cave
+Characters can fight multiple enemies upon
+entering the depths of the cave. After 
+defeating enemies, they can get money to
+buy more items.
 
 Items make characters more beefy
 
