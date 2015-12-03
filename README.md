@@ -38,26 +38,25 @@ Demo Link: https://warm-harbor-2298.herokuapp.com/
 
 Idea: A click based RPG based around the idea of a hype attribute
 
- <!--
+
 Models and Description:
-User
-has name, email, and many comments and questions
-certain Users are Administrators and have lectures
-Lecture
-has title, topic, and summary text
-Comment
-has text and belongs to a User
-Question
-has text, flag to say if it has been answered or not, and belongs to a User
+Player
+has email, and many characters
+Character
+belongs_to player
+has name, health, hype, armor, speed, enemy flag, base health and damage, cash, and items
+Item
+belongs_to character
+has name,
 
 Features:
-Users can log in
-Admins can make lectures
-Users can comment on lectures
-Users can ask questions
-Admins can answer questions
+Players can sign up and play as a Character
+Character can level up by getting hype
+    get items by buying from the store
+    fight monsters in the cave
+Items make characters more beefy
 
 Division of Labor:
-Sam: Made users
-Howard: Made lectures and questions
-Wonjun: Made views and controllers -->
+Phillip: Made Home Controller, Player and Character Models
+David and Alex: Made Cave controller, Enemy fighting
+Jaron: Made Item Model, Shop Controller

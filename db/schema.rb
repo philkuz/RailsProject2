@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201225356) do
+ActiveRecord::Schema.define(version: 20151202060523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,19 @@ ActiveRecord::Schema.define(version: 20151201225356) do
   end
 
   add_index "characters", ["player_id"], name: "index_characters_on_player_id", using: :btree
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "damage"
+    t.integer  "armor"
+    t.integer  "speed"
+    t.integer  "cost"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "character_id"
+  end
+
+  add_index "items", ["character_id"], name: "index_items_on_character_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
     t.string   "image"
@@ -60,4 +73,5 @@ ActiveRecord::Schema.define(version: 20151201225356) do
   add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "characters", "players"
+  add_foreign_key "items", "characters"
 end
