@@ -36,6 +36,8 @@ Team Members: Phillip Kuznetsov, Alex Chan, David Lin, Jaron Armiger
 
 Demo Link: https://warm-harbor-2298.herokuapp.com/
 
+Video Link: https://youtu.be/A7gOFDYtwfw
+
 Idea: A click based RPG where you can fight enemies and get cool items.
 
 
