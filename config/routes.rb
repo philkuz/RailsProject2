@@ -9,13 +9,14 @@ Rails.application.routes.draw do
   root to: 'main#index'
   patch 'sleep/', to: 'main#sleep', as: 'sleep'
   get 'cave/', to: 'cave#cave', as: 'cave'
-  get 'shop/', to:'shop#shop', as: 'shop'
-  get 'deeper/(:id)', to: 'cave#deeper', as: 'deeper'
 
+  get 'deeper/(:id)', to: 'cave#deeper', as: 'deeper'
+  get 'shop/(:prompt)(/name/:name)', to:'shop#shop', as: 'shop'
+  get 'deeper/', to: 'cave#deeper', as: 'deeper'
   patch 'attack/:id', to: 'cave#attack', as: 'attack'
 
   patch 'shop/:name/buy/:type', to: 'shop#buy', as: 'buy'
-
+  get 'win/', to: 'win#index', as: 'win'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

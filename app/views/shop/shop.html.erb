@@ -1,16 +1,42 @@
+<%if @prompt%>
+    <h4><%=@message%></h4>
+<%end%>
 <h1>Welcome to Me Sh0p</h1>
-<h4>Yargh What Do Ye Want to Buy??</h4>
-<h4>Items Available: </h4>
-
+<h3>Yargh What Do Ye Want to Buy??</h3>
+<h3>Items Available: </h3>
+</br>
+<div class="col-lg-4 col-md-5">
+<h4> Boots</h4>
 <% @boots.each do |n,v| %>
 	<h5><%= n %> </h5>
 	<p>Cost: <%= v[0]%> </p>
 	<p>Damage: <%= v[1]%> </p>
 	<p>Armor: <%= v[2]%> </p>
 	<p>Speed: <%= v[3]%> </p>
-	<%= button_to "Purchase", buy_path(n,0), :class => "button medium", :method => :patch %>
-
-
-	<% end %>
-
-<p>Find me in app/views/shop/index.html.erb</p>
+	<%= button_to "Purchase", buy_path(n,0), :class => "btn btn-default", :method => :patch %>
+<% end %>
+</br>
+</div>
+<div class="col-lg-4 col-md-5">
+<h4>Swords</h4>
+<% @swords.each do |n,v| %>
+    <h5><%= n %> </h5>
+    <p>Cost: <%= v[0]%> </p>
+    <p>Damage: <%= v[1]%> </p>
+    <p>Armor: <%= v[2]%> </p>
+    <p>Speed: <%= v[3]%> </p>
+    <%= button_to "Purchase", buy_path(n,1), :class => "btn btn-default", :method => :patch %>
+<%end%>
+</div>
+</br>
+<div class="col-lg-4 col-md-5">
+<h4>Shields</h4>
+<% @shields.each do |n,v| %>
+    <h5><%= n %> </h5>
+    <p>Cost: <%= v[0]%> </p>
+    <p>Damage: <%= v[1]%> </p>
+    <p>Armor: <%= v[2]%> </p>
+    <p>Speed: <%= v[3]%> </p>
+    <%= button_to "Purchase", buy_path(n,2), :class => "btn btn-default", :method => :patch %>
+<%end%>
+</div>

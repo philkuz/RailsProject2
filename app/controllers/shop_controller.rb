@@ -7,6 +7,18 @@ class ShopController < ApplicationController
   end
   def shop
   	#key: name value: cost, damage, armor, speed
+    @prompt = params[:prompt]
+    if @prompt
+        @prompt = @prompt.to_i
+        p "promptme",@prompt
+        if @prompt == 0
+            @message = "Congrats on your succesful purchase of "+ params[:name]
+        elsif @prompt ==2
+            @message = "Not enough moolah"
+        else
+            @message = "You don't even have a wallet"
+        end
+    end
   	@items = shop_items
   	@boots = @items[0]
   	@swords = @items[1]
@@ -18,9 +30,20 @@ class ShopController < ApplicationController
   	@type = @items[params[:type].to_i]
 	@item = @type[params[:name]]
 
-	if @character.cash && @character.cash >= @item[0].to_i 
+	if @character.cash && @character.cash >= @item[0].to_i
 		@character.cash -= @item[0]
 		@character.items.create name: params[:name], cost: @item[0], damage: @item[1], armor: @item[2], speed: @item[3]
+        @cash = @character.cash
+        @character.save
+        @item = params[:name]
+        redirect_to shop_path(0, @item)
+
+    elsif !@character.cash
+        # character cash is not existent - nil value
+        redirect_to shop_path(1)
+    else
+        # Not enough money
+        redirect_to shop_path(2)
     end
   end
 end
