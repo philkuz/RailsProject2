@@ -3,7 +3,11 @@
 <h3>Creature Stats</h3>
 <p>Health: <%=@enemy.health%></p>
 <p>Damage: <%=@enemy.damage%></p>
-<%= button_to "Attack", attack_path, :class => "btn btn-default", :method => :patch%>
+<%if @enemy.health > 0%>
+	<%= button_to "Attack", attack_path(@enemy.id), :class => "btn btn-default", :method => :patch%>
+<%else%>
+	<%= "You killed the monster!"%>
+<%end%>
 
 <h3>Places to Go</h3>
 <% @links.each do |name,link| %>

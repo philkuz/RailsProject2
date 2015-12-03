@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   patch 'sleep/', to: 'main#sleep', as: 'sleep'
   get 'cave/', to: 'cave#cave', as: 'cave'
   get 'shop/', to:'shop#shop', as: 'shop'
-  get 'deeper/', to: 'cave#deeper', as: 'deeper'
+  get 'deeper/(:id)', to: 'cave#deeper', as: 'deeper'
 
-  patch 'attack/', to: 'cave#attack', as: 'attack'
+  patch 'attack/:id', to: 'cave#attack', as: 'attack'
 
   patch 'shop/:name/buy/:type', to: 'shop#buy', as: 'buy'
 

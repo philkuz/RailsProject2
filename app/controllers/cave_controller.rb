@@ -3,18 +3,38 @@ class CaveController < ApplicationController
       @links = {"Leave Cave" => root_path, "Deeper" => deeper_path}
   end
   def deeper
-  	  @links = {"Leave Cave" => root_path, "Deeper" => deeper_path} 
-  	  enemy
+  	  @links = {"Leave Cave" => root_path, "Deeper" => deeper_path}
+      @player = get_character
+      if params[:id] 
+        @enemy = Character.find(params[:id].to_i)
+        $last_id = @enemy.id
+      elsif $last_id
+        @enemy = Character.find($last_id)
+      elsif @player.kills = 5
+        redirect_to win_path
+      else
+        @enemy =Character.find_by(is_enemy: true)
+
+        $last_id = @enemy.id
+      end
+        #find by where is enemy is true 
   end
   def attack
-  	#@player = get_character
-    enemy.health -= 10
-  	redirect_to :back
-  end
-  def enemy
-    @enemy = Character.create health: 20, hype: 2, armor: 0, damage: 2, 
-      speed: 1, is_enemy: true, base_health: 20, base_damage: 2, 
-      cash:5, name: "Cave Monster"
-      #add image
+    @player = get_character
+    @enemy = Character.find(params[:id].to_i)
+    @enemy.health -= @player.damage
+    @enemy.save
+
+    if @enemy.health <= 0
+      @player.kills += 1
+      @enemy.health = 0
+      @player.save
+      @enemy.save
+    else
+      @player.health -= @enemy.damage
+      @player.save
+    end
+
+  	redirect_to deeper_path(params[:id])
   end
 end
