@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :authenticate_player!
-  helper_method :get_health, :get_damage
+  helper_method :get_health, :get_damage, :get_cash, :get_character
   def get_character
       player = current_player
       if player
@@ -26,6 +26,12 @@ class ApplicationController < ActionController::Base
           damage = character.damage.to_s + "/"+character.base_damage.to_s
       end
   end
+ def get_cash
+     character = get_character
+     if character
+         cash = character.cash
+     end
+ end
 
 
 

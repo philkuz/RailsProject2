@@ -10,7 +10,16 @@ class Players::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    current_player.characters.create(health: 100, hype: 0, armor: 10, damage: 10, speed: 10, is_enemy: false, base_health: 100, base_damage: 10, cash: 0)
+    current_player.characters.create(
+        health: 100,
+        hype: 0,
+        armor: 10,
+        damage: 10,
+        speed: 10,
+        is_enemy: false,
+        base_health: 100,
+        base_damage: 10,
+        cash: 30)
   end
 
   # GET /resource/edit

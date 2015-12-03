@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   patch 'attack/', to: 'cave#attack', as: 'attack'
 
   patch 'shop/:name/buy/:type', to: 'shop#buy', as: 'buy'
+  get 'win/', to: 'win#index', as: 'win'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

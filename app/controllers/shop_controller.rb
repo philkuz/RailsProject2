@@ -13,6 +13,10 @@ class ShopController < ApplicationController
         p "promptme",@prompt
         if @prompt == 0
             @message = "Congrats on your succesful purchase of "+ params[:name]
+        elsif @prompt ==2
+            @message = "Not enough moolah"
+        else
+            @message = "You don't even have a wallet"
         end
     end
   	@items = shop_items
@@ -30,6 +34,7 @@ class ShopController < ApplicationController
 		@character.cash -= @item[0]
 		@character.items.create name: params[:name], cost: @item[0], damage: @item[1], armor: @item[2], speed: @item[3]
         @cash = @character.cash
+        @character.save
         @item = params[:name]
         redirect_to shop_path(0, @item)
 
