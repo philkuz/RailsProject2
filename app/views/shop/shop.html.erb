@@ -2,14 +2,17 @@
     <h4><%=@message%></h4>
 <%end%>
 <h1>Welcome to Me Sh0p</h1>
+<img src = "https://em.wattpad.com/d393fc45468fe2ce06ea813e1a8888ece62f04c6/687474703a2f2f696d67312e77696b69612e6e6f636f6f6b69652e6e65742f5f5f636232303133303431363231323230382f73706f6e6765626f622f696d616765732f302f30312f4368726973746d61735f57686f5f3030322e6a7067" alt="Spooky Pirate">
 <h3>Yargh What Do Ye Want to Buy??</h3>
 <h3>Items Available: </h3>
 </br>
 <div class="col-lg-4 col-md-5">
-<h4> Boots</h4>
+	<h4> Boots</h4>
+	<img src = "http://i.dailymail.co.uk/i/pix/2014/12/23/243BA4FF00000578-2884645-Long_strides_The_boots_fit_right_in_with_Kanye_s_outfit_while_Ri-m-121_1419317597502.jpg" alt="Boots">
+
 <% @boots.each do |n,v| %>
 	<h5><%= n %> </h5>
-	<p>Cost: <%= v[0]%> </p>
+	<p>Cost: $<%= v[0]%> </p>
 	<p>Damage: <%= v[1]%> </p>
 	<p>Armor: <%= v[2]%> </p>
 	<p>Speed: <%= v[3]%> </p>
@@ -18,10 +21,11 @@
 </br>
 </div>
 <div class="col-lg-4 col-md-5">
-<h4>Swords</h4>
+	<h4>Swords</h4>
+	<img src = "http://orig08.deviantart.net/6c86/f/2013/106/e/c/shitty_sword_shenanigans_by_moonshield179-d61z02p.gif" alt="SwordBoy">
 <% @swords.each do |n,v| %>
     <h5><%= n %> </h5>
-    <p>Cost: <%= v[0]%> </p>
+    <p>Cost: $<%= v[0]%> </p>
     <p>Damage: <%= v[1]%> </p>
     <p>Armor: <%= v[2]%> </p>
     <p>Speed: <%= v[3]%> </p>
@@ -31,9 +35,10 @@
 </br>
 <div class="col-lg-4 col-md-5">
 <h4>Shields</h4>
+<img src="http://www.ericharshbarger.org/lego/images/lego_knight.jpg" alt="Shield">
 <% @shields.each do |n,v| %>
     <h5><%= n %> </h5>
-    <p>Cost: <%= v[0]%> </p>
+    <p>Cost: $<%= v[0]%> </p>
     <p>Damage: <%= v[1]%> </p>
     <p>Armor: <%= v[2]%> </p>
     <p>Speed: <%= v[3]%> </p>

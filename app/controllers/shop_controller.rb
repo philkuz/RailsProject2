@@ -1,8 +1,8 @@
 class ShopController < ApplicationController
   def shop_items
   	@boots = {"Rainbow Boots" => [10,0,0,10], "Sweet Boots Yo" => [20,0,0,20], "#1 Public Boots in the Nation" => [100,0,0,100]}
-  	@swords = {"Sword 61A" => [10,10,0,0]}
-  	@shields = {"Shield.0" => [10,0,10,0]}
+  	@swords = {"Sword 61A" => [10,10,0,0], "Sword 61B" => [20,20,5,0], "Sword 61C" => [100,50,0,20]}
+  	@shields = {"Shield.0" => [10,0,10,0], "MegaShield" => [15,0,15,0], "UltraShield" => [25,0,25,0]}
   	@items = [@boots,@swords,@shields]
   end
   def shop

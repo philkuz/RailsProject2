@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   get 'deeper/(:id)', to: 'cave#deeper', as: 'deeper'
   get 'shop/(:prompt)(/name/:name)', to:'shop#shop', as: 'shop'
-  get 'deeper/', to: 'cave#deeper', as: 'deeper'
   patch 'attack/:id', to: 'cave#attack', as: 'attack'
 
   patch 'shop/:name/buy/:type', to: 'shop#buy', as: 'buy'
