@@ -8,13 +8,13 @@ class CaveController < ApplicationController
       if params[:id] 
         @enemy = Character.find(params[:id].to_i)
         $last_id = @enemy.id
-      elsif $last_id
-        @enemy = Character.find($last_id)
-      elsif @player.kills = 5
+        p "params exist"
+      elsif @player.kills == 5
         redirect_to win_path
+        p "win"
       else
-        @enemy =Character.find_by(is_enemy: true)
-
+        @enemy =Character.find_by(name: "Monster " + (@player.kills + 1).to_s)
+        p "next monster"
         $last_id = @enemy.id
       end
         #find by where is enemy is true 
@@ -27,6 +27,8 @@ class CaveController < ApplicationController
 
     if @enemy.health <= 0
       @player.kills += 1
+      @player.cash += @enemy.cash
+      @player.hype += @enemy.hype
       @enemy.health = 0
       @player.save
       @enemy.save

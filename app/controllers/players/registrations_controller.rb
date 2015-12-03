@@ -19,7 +19,8 @@ class Players::RegistrationsController < Devise::RegistrationsController
         is_enemy: false,
         base_health: 100,
         base_damage: 10,
-        cash: 30)
+        cash: 30,
+        kills: 0)
   end
 
   # GET /resource/edit
