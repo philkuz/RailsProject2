@@ -18757,3 +18757,1060 @@ Processing by MainController#index as HTML
   Rendered layouts/_playerattrs.html.erb (6.8ms)
 Completed 200 OK in 1097ms (Views: 1093.4ms | ActiveRecord: 0.7ms)
 >>>>>>> 20ad531488e3dd36364d4806c4b07464858815a8
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 58]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "cavemonster1.jpg"], ["updated_at", "2015-12-03 06:29:16.943430"], ["id", 58]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 59]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "cavemonster2.jpg"], ["updated_at", "2015-12-03 06:29:46.993635"], ["id", 59]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mCharacter Load (0.5ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "cavemonster3.jpg"], ["updated_at", "2015-12-03 06:29:58.373456"], ["id", 60]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mCharacter Load (0.5ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "cavemonster4.jpg"], ["updated_at", "2015-12-03 06:30:07.035501"], ["id", 61]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "EvilHoward.jpg"], ["updated_at", "2015-12-03 06:30:26.415975"], ["id", 62]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/" for 10.0.2.2 at 2015-12-03 06:31:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mPlayer Load (1.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered main/index.html.erb within layouts/application (227.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (25.4ms)
+  [1m[36mCharacter Load (0.7ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (60.8ms)
+Completed 200 OK in 8255ms (Views: 8164.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-411baf493fb899b6b2c333fdf1c53bfb67b3dd1d50b36829e2704745b77c8cb8.css?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-37390ab1ff74d875ab876a0072fb1263fb1d580938efdf8adf6ce85c4ef448b8.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 10.0.2.2 at 2015-12-03 06:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/cave" for 10.0.2.2 at 2015-12-03 06:31:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#cave as HTML
+  [1m[36mPlayer Load (0.4ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered cave/cave.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (21.2ms)
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (6.5ms)
+Completed 200 OK in 1144ms (Views: 1140.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:31:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  [1m[35mPlayer Load (0.5ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.6ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1  [["name", "Monster 1"]]
+  Rendered cave/deeper.html.erb within layouts/application (29.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (18.9ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (3.9ms)
+Completed 200 OK in 1117ms (Views: 1105.0ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/attack/58" for 10.0.2.2 at 2015-12-03 06:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"RWhD8TDfT5WmPfTHhEeKLvHQUtcDh9J/WpYXBdMmWZYtPUbqg/i99DCPD9zRyiGsWr7n1irwYnHClz5lB91J2A==", "id"=>"58"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 58]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (15.1ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 10], ["updated_at", "2015-12-03 06:31:34.562095"], ["id", 58]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 98], ["updated_at", "2015-12-03 06:31:34.597553"], ["id", 65]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/58
+Completed 302 Found in 57ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/deeper/58" for 10.0.2.2 at 2015-12-03 06:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"58"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 58]]
+  Rendered cave/deeper.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (16.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.5ms)
+Completed 200 OK in 1133ms (Views: 1123.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/attack/58" for 10.0.2.2 at 2015-12-03 06:31:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"owKFsNa2BdhDtpYXoB3JcBgOo0GeBzrkTr+PTr747ynLV4CrZZH3udUEbQz1kGLys2AWQLdwiurWvqYuagP/Zw==", "id"=>"58"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.5ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 58]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 0], ["updated_at", "2015-12-03 06:31:37.654831"], ["id", 58]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "kills" = $1, "cash" = $2, "hype" = $3, "updated_at" = $4 WHERE "characters"."id" = $5  [["kills", 1], ["cash", 35], ["hype", 5], ["updated_at", "2015-12-03 06:31:37.660753"], ["id", 65]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/58
+Completed 302 Found in 22ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/deeper/58" for 10.0.2.2 at 2015-12-03 06:31:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"58"}
+  [1m[35mPlayer Load (0.9ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 58]]
+  Rendered cave/deeper.html.erb within layouts/application (28.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (21.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (5.0ms)
+Completed 200 OK in 1084ms (Views: 1077.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:31:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1[0m  [["name", "Monster 2"]]
+  Rendered cave/deeper.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (18.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.1ms)
+Completed 200 OK in 1095ms (Views: 1089.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/attack/59" for 10.0.2.2 at 2015-12-03 06:31:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"6KVi7nCOW2l2jGmRGw7XDp0Nt/cQUHS7VFf7pQue/+CA8Gf1w6mpCOA+kopOg3yMNmMC9jknxLXMVtLF32Xvrg==", "id"=>"59"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 59]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 20], ["updated_at", "2015-12-03 06:31:46.227424"], ["id", 59]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 95], ["updated_at", "2015-12-03 06:31:46.233948"], ["id", 65]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/59
+Completed 302 Found in 20ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/deeper/59" for 10.0.2.2 at 2015-12-03 06:31:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 59]]
+  Rendered cave/deeper.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (28.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.6ms)
+Completed 200 OK in 1067ms (Views: 1060.9ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/attack/59" for 10.0.2.2 at 2015-12-03 06:31:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"frEmZJyRRDoHf30OCx7W0oeZpW6mcVqFGdCNuIsMoxEW5CN/L7a2W5HNhhVek31QLPcQb48G6ouB0aTYX/ezXw==", "id"=>"59"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 59]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 10], ["updated_at", "2015-12-03 06:31:56.195087"], ["id", 59]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 92], ["updated_at", "2015-12-03 06:31:56.201845"], ["id", 65]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/59
+Completed 302 Found in 22ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/deeper/59" for 10.0.2.2 at 2015-12-03 06:31:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 59]]
+  Rendered cave/deeper.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (18.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (3.9ms)
+Completed 200 OK in 1029ms (Views: 1021.5ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/attack/59" for 10.0.2.2 at 2015-12-03 06:32:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"OxaYlpMdHrEbwPAHAMCO67k2B6xHRYWYt4lI0BZT96tTQ52NIDrs0I1yCxxVTSVpEliyrW4yNZYviGGwwqjn5Q==", "id"=>"59"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 59]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 0], ["updated_at", "2015-12-03 06:32:03.034285"], ["id", 59]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "kills" = $1, "cash" = $2, "hype" = $3, "updated_at" = $4 WHERE "characters"."id" = $5[0m  [["kills", 2], ["cash", 40], ["hype", 20], ["updated_at", "2015-12-03 06:32:03.040606"], ["id", 65]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/59
+Completed 302 Found in 20ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/deeper/59" for 10.0.2.2 at 2015-12-03 06:32:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.8ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 59]]
+  Rendered cave/deeper.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (17.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (3.9ms)
+Completed 200 OK in 1028ms (Views: 1020.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:32:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1  [["name", "Monster 3"]]
+  Rendered cave/deeper.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (17.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.2ms)
+Completed 200 OK in 1195ms (Views: 1188.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/attack/60" for 10.0.2.2 at 2015-12-03 06:32:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"StyZYiKeidVJSk0TEIZ6nB279pVz05jL/oAf7t8tl00iiZx5kbl7tN/4tghFC9EettVDlFqkKMVmgTaOC9aHAw==", "id"=>"60"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 30], ["updated_at", "2015-12-03 06:32:14.240470"], ["id", 60]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 88], ["updated_at", "2015-12-03 06:32:14.248109"], ["id", 65]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/60
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/deeper/60" for 10.0.2.2 at 2015-12-03 06:32:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 60]]
+  Rendered cave/deeper.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (21.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.0ms)
+Completed 200 OK in 1197ms (Views: 1190.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/attack/60" for 10.0.2.2 at 2015-12-03 06:32:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"5pfpQKcTeQwfHgEyNzrzjzafMY2dfwohmXGpl3YXQMGOwuxbFDSLbYms+ilit1gNnfGEjLQIui8BcID3ouxQjw==", "id"=>"60"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 20], ["updated_at", "2015-12-03 06:32:17.158344"], ["id", 60]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 84], ["updated_at", "2015-12-03 06:32:17.163729"], ["id", 65]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/60
+Completed 302 Found in 17ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/deeper/60" for 10.0.2.2 at 2015-12-03 06:32:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 60]]
+  Rendered cave/deeper.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (18.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (3.7ms)
+Completed 200 OK in 1041ms (Views: 1035.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/attack/60" for 10.0.2.2 at 2015-12-03 06:32:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"K0PezC9sXsPQIkCcPJs2lPtHeKbAz3l7Zu7NJcn/2S5DFtvXnEusokaQu4dpFp0WUCnNp+m4yXX+7+RFHQTJYA==", "id"=>"60"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 10], ["updated_at", "2015-12-03 06:32:20.120656"], ["id", 60]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 80], ["updated_at", "2015-12-03 06:32:20.126064"], ["id", 65]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/60
+Completed 302 Found in 18ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/deeper/60" for 10.0.2.2 at 2015-12-03 06:32:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.7ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 60]]
+  Rendered cave/deeper.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (17.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.5ms)
+Completed 200 OK in 1061ms (Views: 1053.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/attack/60" for 10.0.2.2 at 2015-12-03 06:32:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"pq0vlPedE+WX2reWLwRN8+iHkF+BA05vri2ZMKnsl8HO+CqPRLrhhAFoTI16ieZxQ+klXqh0/mE2LLBQfReHjw==", "id"=>"60"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 0], ["updated_at", "2015-12-03 06:32:22.908455"], ["id", 60]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "kills" = $1, "cash" = $2, "hype" = $3, "updated_at" = $4 WHERE "characters"."id" = $5  [["kills", 3], ["cash", 45], ["hype", 45], ["updated_at", "2015-12-03 06:32:22.914330"], ["id", 65]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deeper/60
+Completed 302 Found in 20ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/deeper/60" for 10.0.2.2 at 2015-12-03 06:32:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 60]]
+  Rendered cave/deeper.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (17.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.7ms)
+Completed 200 OK in 1149ms (Views: 1141.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:32:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.5ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1[0m  [["name", "Monster 4"]]
+  Rendered cave/deeper.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (19.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.9ms)
+Completed 200 OK in 1145ms (Views: 1138.4ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/attack/61" for 10.0.2.2 at 2015-12-03 06:32:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"xt+ezzELXOu9jhRXeaaBTZQHUMPr911ovLGyEmCI7wquipvUgiyuiis870wsKyrPP2nlwsKA7WYksJtytHP/RA==", "id"=>"61"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 40], ["updated_at", "2015-12-03 06:32:31.730369"], ["id", 61]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 75], ["updated_at", "2015-12-03 06:32:31.736946"], ["id", 65]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/61
+Completed 302 Found in 18ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/deeper/61" for 10.0.2.2 at 2015-12-03 06:32:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered cave/deeper.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (16.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.9ms)
+Completed 200 OK in 1049ms (Views: 1042.6ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/attack/61" for 10.0.2.2 at 2015-12-03 06:32:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"me70Hu/XamrN84Sknv7tKceCgJ/zNm4f/xfg6WY/n/Txu/EFXPCYC1tBf7/Lc0arbOw1ntpB3hFnFsmJssSPug==", "id"=>"61"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 30], ["updated_at", "2015-12-03 06:32:34.259681"], ["id", 61]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 70], ["updated_at", "2015-12-03 06:32:34.265040"], ["id", 65]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/61
+Completed 302 Found in 19ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/deeper/61" for 10.0.2.2 at 2015-12-03 06:32:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered cave/deeper.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (16.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.5ms)
+Completed 200 OK in 1082ms (Views: 1072.7ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/attack/61" for 10.0.2.2 at 2015-12-03 06:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"yqapZg8wTmDxTfoeHDS0hDCbz4Y0OXSWPUPfUbU+za2i86x9vBe8AWf/AQVJuR8Gm/V6hx1OxJilQvYxYcXd4w==", "id"=>"61"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 20], ["updated_at", "2015-12-03 06:32:36.973572"], ["id", 61]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 65], ["updated_at", "2015-12-03 06:32:36.978273"], ["id", 65]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/61
+Completed 302 Found in 17ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/deeper/61" for 10.0.2.2 at 2015-12-03 06:32:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered cave/deeper.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (17.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (18.1ms)
+Completed 200 OK in 1036ms (Views: 1027.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/attack/61" for 10.0.2.2 at 2015-12-03 06:32:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"FXfpQJDptvnULZTgqZsqIK8em9wlejftgRc2e4+iNU19IuxbI85EmEKfb/v8FoGiBHAu3QwNh+MZFh8bW1klAw==", "id"=>"61"}
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 10], ["updated_at", "2015-12-03 06:32:39.990226"], ["id", 61]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["health", 60], ["updated_at", "2015-12-03 06:32:39.997281"], ["id", 65]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/61
+Completed 302 Found in 20ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/deeper/61" for 10.0.2.2 at 2015-12-03 06:32:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered cave/deeper.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (22.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (7.3ms)
+Completed 200 OK in 1130ms (Views: 1122.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/attack/61" for 10.0.2.2 at 2015-12-03 06:32:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#attack as HTML
+  Parameters: {"authenticity_token"=>"YuuZlqGy+JfsQb/+pkPMTzLwgUe2dXLoPqhQTteu5XsKvpyNEpUK9nrzROXzzmfNmZ40Rp8CwuamqXkuA1X1NQ==", "id"=>"61"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "characters" SET "health" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["health", 0], ["updated_at", "2015-12-03 06:32:42.911517"], ["id", 61]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "characters" SET "kills" = $1, "cash" = $2, "hype" = $3, "updated_at" = $4 WHERE "characters"."id" = $5[0m  [["kills", 4], ["cash", 50], ["hype", 80], ["updated_at", "2015-12-03 06:32:42.917413"], ["id", 65]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/deeper/61
+Completed 302 Found in 21ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/deeper/61" for 10.0.2.2 at 2015-12-03 06:32:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered cave/deeper.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (19.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (4.2ms)
+Completed 200 OK in 1089ms (Views: 1080.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CaveController#deeper as HTML
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1  [["name", "Monster 5"]]
+  Rendered cave/deeper.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (17.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (7.8ms)
+Completed 200 OK in 1118ms (Views: 1111.6ms | ActiveRecord: 1.1ms)
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "cavemonster5.jpg"], ["updated_at", "2015-12-03 06:34:10.568265"], ["id", 62]]
+  [1m[35m (0.9ms)[0m  COMMIT
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:34:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CaveController#deeper as HTML
+  [1m[35mPlayer Load (1.6ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.5ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1  [["name", "Monster 5"]]
+  Rendered cave/deeper.html.erb within layouts/application (215.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (25.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (5.6ms)
+Completed 200 OK in 2529ms (Views: 2371.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-411baf493fb899b6b2c333fdf1c53bfb67b3dd1d50b36829e2704745b77c8cb8.css?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-37390ab1ff74d875ab876a0072fb1263fb1d580938efdf8adf6ce85c4ef448b8.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.2.2 at 2015-12-03 06:34:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3[0m  [["image", "c5.jpg"], ["updated_at", "2015-12-03 06:36:59.961526"], ["id", 62]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/deeper" for 10.0.2.2 at 2015-12-03 06:37:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CaveController#deeper as HTML
+  [1m[35mPlayer Load (0.6ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."id" = $1  ORDER BY "players"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."name" = $1 LIMIT 1  [["name", "Monster 5"]]
+  Rendered cave/deeper.html.erb within layouts/application (217.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (24.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1[0m  [["player_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."player_id" = $1 LIMIT 1  [["player_id", 5]]
+  Rendered layouts/_playerattrs.html.erb (7.8ms)
+Completed 200 OK in 2360ms (Views: 2198.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cave.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/shop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-411baf493fb899b6b2c333fdf1c53bfb67b3dd1d50b36829e2704745b77c8cb8.css?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cave.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/shop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-37390ab1ff74d875ab876a0072fb1263fb1d580938efdf8adf6ce85c4ef448b8.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/win.self-37390ab1ff74d875ab876a0072fb1263fb1d580938efdf8adf6ce85c4ef448b8.js?body=1" for 10.0.2.2 at 2015-12-03 06:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mCharacter Load (0.6ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCharacter Load (0.7ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 62]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "characters" SET "image" = $1, "updated_at" = $2 WHERE "characters"."id" = $3  [["image", "cavemonster5.jpg"], ["updated_at", "2015-12-03 06:38:41.011276"], ["id", 62]]
+  [1m[36m (24.6ms)[0m  [1mCOMMIT[0m
